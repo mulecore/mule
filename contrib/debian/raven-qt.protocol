@@ -1,0 +1,11 @@
+[Protocol]
+exec=mule-qt '%u'
+protocol=mule
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

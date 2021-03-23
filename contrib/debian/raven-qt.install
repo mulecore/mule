@@ -1,0 +1,6 @@
+usr/local/bin/mule-qt usr/bin
+share/pixmaps/mule32.xpm usr/share/pixmaps
+share/pixmaps/mule16.xpm usr/share/pixmaps
+share/pixmaps/mule128.png usr/share/pixmaps
+debian/mule-qt.desktop usr/share/applications
+debian/mule-qt.protocol usr/share/kde4/services/

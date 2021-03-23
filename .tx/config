@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[mule.qt-translation-014x]
+file_filter = src/qt/locale/mule_<lang>.ts
+source_file = src/qt/locale/mule_en.ts
+source_lang = en

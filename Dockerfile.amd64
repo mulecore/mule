@@ -1,0 +1,27 @@
+FROM amd64/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN apt-get update && apt-get install -y bash net-tools && apt-get clean
+
+RUN useradd -ms /bin/bash mule
+
+RUN mkdir /etc/mule
+
+RUN mkdir /var/lib/mule
+
+RUN chown mule:mule /etc/mule /var/lib/mule
+
+WORKDIR /home/mule
+
+COPY --chown=mule:mule linux64/* /home/mule/
+
+COPY --chown=mule:mule run.sh /home/mule/
+
+USER mule
+
+CMD ["/home/mule/run.sh"]

@@ -1,0 +1,22 @@
+[Unit]
+Description=Mule's distributed currency daemon
+After=network.target
+
+[Service]
+User=mule
+Group=mule
+
+Type=forking
+PIDFile=/var/lib/muled/muled.pid
+ExecStart=/usr/bin/muled -daemon -pid=/var/lib/muled/muled.pid \
+-conf=/etc/mule/mule.conf -datadir=/var/lib/muled -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

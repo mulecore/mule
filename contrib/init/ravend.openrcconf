@@ -1,0 +1,33 @@
+# /etc/conf.d/muled: config file for /etc/init.d/muled
+
+# Config file location
+#MULED_CONFIGFILE="/etc/mule/mule.conf"
+
+# What directory to write pidfile to?  (created and owned by $MULED_USER)
+#MULED_PIDDIR="/var/run/muled"
+
+# What filename to give the pidfile
+#MULED_PIDFILE="${MULED_PIDDIR}/muled.pid"
+
+# Where to write muled data (be mindful that the blockchain is large)
+#MULED_DATADIR="/var/lib/muled"
+
+# User and group to own muled process
+#MULED_USER="mule"
+#MULED_GROUP="mule"
+
+# Path to muled executable
+#MULED_BIN="/usr/bin/muled"
+
+# Nice value to run muled under
+#MULED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#MULED_OPTS=""
+
+# The timeout in seconds OpenRC will wait for muled to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+MULED_SIGTERM_TIMEOUT=60
