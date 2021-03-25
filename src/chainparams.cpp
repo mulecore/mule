@@ -54,8 +54,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "The Times 03/Jan/2018 Bitcoin is name of the game for new generation of firms";
-    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+    const char* pszTimestamp = "The Times 25/March/2021 Bitcoin is name for currency of multiplanetaria specisies";
+    const CScript genesisOutputScript = CScript() << ParseHex(" 04f8750ced902db4ba75903288a64de61b6858718b192af1acbb2ad99bec6a99c71abf53c82ffc8386ccac1e8a5f90ee2681ac525e74c8f8dae73d8c2cc28b5876") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -174,10 +174,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x52; // R
-        pchMessageStart[1] = 0x41; // A
-        pchMessageStart[2] = 0x56; // V
-        pchMessageStart[3] = 0x4e; // N
+        pchMessageStart[0] = 0x53; // M
+        pchMessageStart[1] = 0x42; // U
+        pchMessageStart[2] = 0x57; // L
+        pchMessageStart[3] = 0x4d; // E
         nDefaultPort = 9653;
         nPruneAfterHeight = 100000;
 
@@ -188,13 +188,13 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0000006b444bc2f2ffe627be9d9e7e7a0730000870ef6eb6da46c8eae389df90"));
         assert(genesis.hashMerkleRoot == uint256S("28ff00a867739a352523808d301f504bc4547699398d70faf2266a8bae5f3516"));
 
-        vSeeds.emplace_back("seed-mule.bitactivate.com", false);
-        vSeeds.emplace_back("seed-mule.mulecoin.com", false);
+        vSeeds.emplace_back("seed-mule.mulecore.org", false);
+        vSeeds.emplace_back("seed-mule.mulecoin.org", false);
         vSeeds.emplace_back("seed-mule.mulecoin.org", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,49);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,111);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,130);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
