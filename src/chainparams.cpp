@@ -186,7 +186,7 @@ public:
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
         assert(consensus.hashGenesisBlock == uint256S("0000006b444bc2f2ffe627be9d9e7e7a0730000870ef6eb6da46c8eae389df90"));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S("0x"));
 
         vSeeds.emplace_back("seed-mule.mulecore.org", false);
         vSeeds.emplace_back("seed-mule.mulecoin.org", false);
